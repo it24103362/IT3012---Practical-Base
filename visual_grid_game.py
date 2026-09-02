@@ -182,8 +182,8 @@ class GridGameGUI:
 
         self.env = VisualGridHuntGame(width=width, height=height, num_food=num_food, num_opponents=num_opponents, custom_walls=walls)
 
-        # Initialize the Search Agent. You can change algorithm to 'dfs' or 'ucs'
-        self.agent = SearchAgent(algorithm='bfs')  
+        # Initialize the Search Agent. Changed algorithm to 'AStar' as per Step 1.3
+        self.agent = SearchAgent(algorithm='AStar')  
         
         max_canvas_dim = 600
         self.cell_size = max(20, min(max_canvas_dim // self.env.width, max_canvas_dim // self.env.height))
